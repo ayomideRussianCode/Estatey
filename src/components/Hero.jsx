@@ -2,8 +2,9 @@ import React from 'react'
 
 function Hero() {
   return (
-    <div>Hero</div>
+    <div className="flex">     
+    </div>
   )
 }
 
-export default Hero
+export default Hero;
