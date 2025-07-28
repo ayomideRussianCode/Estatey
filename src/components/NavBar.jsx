@@ -40,7 +40,7 @@ function NavBar() {
                 <IoCloseOutline className="w-12 h-8" />
               </div>
             ) : (
-              <RxHamburgerMenu className="w-12 h-8" />
+              <RxHamburgerMenu className="w-12 h-10" />
             )}
           </button>
         </div>

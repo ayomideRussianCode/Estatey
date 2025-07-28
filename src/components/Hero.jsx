@@ -37,7 +37,7 @@ function Hero() {
 
   return (
     <div className="flex flex-col lg:flex-row">
-      <div className="bg-[#401408]  h-150 lg:w-1/2">
+      <div className="bg-[#401408]  h-212 lg:w-1/2">
         <div>
           {" "}
           <h1 className="text-6xl lg:w-6/12 lg:mx-28 mx-10 my-8 font-semibold text-[#f6dee3] ">
@@ -49,7 +49,7 @@ function Hero() {
             real estate.
           </p>
           <div>
-            <div className="flex flex-col lg:flex-row gap-4">
+            <div className="flex lg:flex-row gap-4">
               <div className="lg:w-1/2 lg:mx-28 mx-10 px-4 py-8 w-50  bg-white">
                 {filters.map((item, index) => (
                   <div className="flex gap-4 m-4">
@@ -72,14 +72,14 @@ function Hero() {
                   </button>
                 </div>
               </div>
-              <div className= "w-50 lg:mx-28 mx-10 text-white lg:w-1/2">
+              <div className= "w-50 lg:mx-28 mx-10 text-white font-normal lg:w-1/2">
                 <h1 className="pt-4 mx-4">Our Services</h1>
                 {services.map((service, index) => (
                   <div className="mx-4">
                     <div key={index}>
                       <img src={service.img} alt={service.alt} />
                     </div>
-                    <p key={index}>{service.text}</p>
+                    <p className="text-sm" key={index}>{service.text}</p>
                   </div>
                 ))}
               </div>
@@ -87,7 +87,9 @@ function Hero() {
           </div>
         </div>{" "}
       </div>
-      <div className="bg-pink-800 h-150 lg:w-1/2">Hi</div>
+      <div className="lg:w-1/2">
+      <img className="h-212" src="/hero-img.png" alt="hero-img" />
+      </div>
     </div>
   );
 }
