@@ -33,7 +33,7 @@ function NavBar() {
             </ul>
           </nav>
         )}
-        <div className="md:hidden flex justify-center items-center ">
+        <div className="md:hidden flex mx-auto justify-center items-center ">
           <button onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? (
               <div className="">

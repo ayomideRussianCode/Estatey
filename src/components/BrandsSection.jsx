@@ -8,7 +8,7 @@ function BrandsSection() {
     { image: "/homey-logo.svg" },
   ];
   return (
-    <section>
+    <div>
       <div className=" flex justify-center items-center mx-6 my-10 ">
         {brands.map((brand, index) => (
           <ul key={index} className="flex ">
@@ -16,7 +16,7 @@ function BrandsSection() {
           </ul>
         ))}
       </div>
-    </section>
+    </div>
   );
 }
 

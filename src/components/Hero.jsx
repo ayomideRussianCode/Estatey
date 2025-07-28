@@ -36,8 +36,8 @@ function Hero() {
   ];
 
   return (
-    <div className="flex flex-col lg:flex-row">
-      <div className="bg-[#401408]  h-212 lg:w-1/2">
+    <div className="flex flex-col w-full lg:flex-row">
+      <div className="bg-[#401408] h-180 lg:w-1/2">
         <div>
           {" "}
           <h1 className="text-6xl lg:w-6/12 lg:mx-28 mx-10 my-8 font-semibold text-[#f6dee3] ">
@@ -49,11 +49,11 @@ function Hero() {
             real estate.
           </p>
           <div>
-            <div className="flex lg:flex-row gap-4">
-              <div className="lg:w-1/2 lg:mx-28 mx-10 px-4 py-8 w-50  bg-white">
+            <div className="flex justify-center items-center lg:flex-row gap-4">
+              <div className="lg:w-1/2 lg:mx-28 mx-10 px-4 py-8 w-50 bg-white">
                 {filters.map((item, index) => (
-                  <div className="flex gap-4 m-4">
-                    <div key={index} className="rounded-none bg-[#ececec]">
+                  <div className="flex gap-4 m-4 ">
+                    <div key={index} className="rounded-none flex items-center px-2 py-2 bg-[#ececec]">
                       <img src={item.img} alt={item.alt} />
                     </div>
                     <div className="text-xs">
@@ -88,7 +88,7 @@ function Hero() {
         </div>{" "}
       </div>
       <div className="lg:w-1/2">
-      <img className="h-212" src="/hero-img.png" alt="hero-img" />
+      <img className="h-180 w-full " src="/hero-img.png" alt="hero-img" />
       </div>
     </div>
   );
