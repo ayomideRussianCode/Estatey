@@ -7,33 +7,24 @@ function NavBar() {
   const navLinks = ["Home", "Properties", "Agents", "Pages"];
 
   return (
-    <header className="flex">
-      <div className="flex justify-between items-center w-full px-[100px] h-30 bg-[#401408] text-white">
+    <header className="flex  bg-[#401408] text-white">
+      <div className="flex justify-between items-center w-full px-4 md:px-10 xl:px-[100px] h-30 bg-[#401408]">
         <h1 className="font-medium text-4xl">Estatey</h1>
         <nav className="hidden md:flex">
-          <ul className="flex justify-around gap-20">
+          <ul className="flex justify-center items-center gap-10 xl:gap-20">
             {navLinks.map((link, index) => (
               <li key={index}>
                 <a href="#">{link}</a>
               </li>
             ))}
+            <li>
+              <button className=" hidden md:flex px-6 py-3 text-xs bg-white text-[#401408] font-semibold rounded-none ">
+                Contact Us
+              </button>
+            </li>
           </ul>
         </nav>
-        <button className=" hidden md:flex px-6 py-3 text-xs bg-white text-[#401408] font-semibold rounded-none ">
-          Contact Us
-        </button>
-        {isOpen && (
-          <nav className="md:hidden bg-[#401408] mt-16 px-12 py-8">
-            <ul className="flex flex-col gap-4 text-lg">
-              {navLinks.map((link) => (
-                <li key={link} className="cursor-pointer hover:text-black">
-                  <a href="#">{link}</a>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        )}
-        <div className="md:hidden flex mx-auto justify-center items-center ">
+        <div className="md:hidden ">
           <button onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? (
               <div className="">
@@ -45,6 +36,22 @@ function NavBar() {
           </button>
         </div>
       </div>
+      {isOpen && (
+        <nav className="md:hidden bg-[#401408] text-white px-8 pb-6 border-t border-white shadow-md py-4">
+          <ul className="flex flex-col gap-4 text-lg">
+            {navLinks.map((link) => (
+              <li key={link} className="cursor-pointe">
+                <a href="#">{link}</a>
+              </li>
+            ))}
+            <li>
+              <button className=" flex p-2 text-xs bg-white text-[#401408] font-semibold rounded-none ">
+                Contact Us
+              </button>
+            </li>
+          </ul>
+        </nav>
+      )}
     </header>
   );
 }
