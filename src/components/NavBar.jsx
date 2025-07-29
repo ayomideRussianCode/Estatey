@@ -8,7 +8,7 @@ function NavBar() {
 
   return (
     <header className="flex  bg-[#401408] text-white">
-      <div className="flex justify-between items-center w-full px-4 md:px-10 xl:px-[100px] h-30 bg-[#401408]">
+      <div className="flex justify-between items-center  w-full px-4 md:px-10 xl:px-[100px] h-30 bg-[#401408]">
         <h1 className="font-medium text-4xl">Estatey</h1>
         <nav className="hidden md:flex">
           <ul className="flex justify-center items-center gap-10 xl:gap-20">
@@ -37,7 +37,7 @@ function NavBar() {
         </div>
       </div>
       {isOpen && (
-        <nav className="md:hidden bg-[#401408] text-white px-8 pb-6 border-t border-white shadow-md py-4">
+        <nav className="md:hidden bg-[#401408] text-white px-8 pb-6 py-4">
           <ul className="flex flex-col gap-4 text-lg">
             {navLinks.map((link) => (
               <li key={link} className="cursor-pointe">

@@ -9,7 +9,7 @@ function BrandsSection() {
   ];
   return (
     <div>
-      <div className=" flex justify-center items-center mx-6 my-10 ">
+      <div className=" flex justify-center items-center mx-8 my-8">
         {brands.map((brand, index) => (
           <ul key={index} className="flex ">
             <img src={brand.image} alt="Brand Logo" />
