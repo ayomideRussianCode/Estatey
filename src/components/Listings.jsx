@@ -1,3 +1,5 @@
+import { IoIosArrowRoundForward } from "react-icons/io";
+
 function Listings() {
   const listingDetails = [
     {
@@ -60,7 +62,9 @@ function Listings() {
           <h1 className="text-4xl lg:text-6xl font-bold text-black mb-2">
             Featured Listings
           </h1>
-          <p className="text-black">More</p>
+          <p className="text-black flex items-center">
+            More <IoIosArrowRoundForward className="w-6 h-6 " />
+          </p>
         </div>
 
         {/* PROPERTY CARDS */}
@@ -82,19 +86,28 @@ function Listings() {
                 </span>
               </p>
               <p className="font-semibold text-xl mb-4">{listings.label}</p>
-              <p className="border-b border-gray-300 py-2">{listings.address}</p>
+              <p className="border-b border-gray-300 py-2">
+                {listings.address}
+              </p>
               <div className="flex gap-4 mt-4 items-center text-sm  text-gray-600">
                 <p className="flex gap-2">
                   {" "}
-                  <img className="w-6 h-6" src={listings.bed} alt="bed" /> <span> 4 Beds</span>
+                  <img className="w-6 h-6" src={listings.bed} alt="bed" />{" "}
+                  <span> 4 Beds</span>
                 </p>
                 <p className="flex gap-2">
                   {" "}
-                  <img className="w-6 h-6" src={listings.bath} alt="bath" /> <span> 4 Baths</span>
+                  <img
+                    className="w-6 h-6"
+                    src={listings.bath}
+                    alt="bath"
+                  />{" "}
+                  <span> 4 Baths</span>
                 </p>{" "}
                 <p className="flex gap-2">
                   {" "}
-                  <img className="w-6 h-6" src={listings.sqm} alt="sqm" /> <span> 6 x 8m²</span>
+                  <img className="w-6 h-6" src={listings.sqm} alt="sqm" />{" "}
+                  <span> 6 x 8m²</span>
                 </p>{" "}
               </div>
             </div>

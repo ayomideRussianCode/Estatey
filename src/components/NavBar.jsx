@@ -7,23 +7,21 @@ function NavBar() {
   const navLinks = ["Home", "Properties", "Agents", "Pages"];
 
   return (
-    <header className="flex  bg-[#401408] text-white">
+    <header className="flex bg-[#401408] text-white">
       <div className="flex justify-between items-center  w-full px-4 md:px-10 xl:px-[100px] h-30 bg-[#401408]">
         <h1 className="font-medium text-4xl">Estatey</h1>
-        <nav className="hidden md:flex">
+        <nav className="hidden md:flex flex-1 justify-center">
           <ul className="flex justify-center items-center gap-10 xl:gap-20">
             {navLinks.map((link, index) => (
               <li key={index}>
                 <a href="#">{link}</a>
               </li>
             ))}
-            <li>
-              <button className=" hidden md:flex px-6 py-3 text-xs bg-white text-[#401408] font-semibold rounded-none ">
-                Contact Us
-              </button>
-            </li>
           </ul>
         </nav>
+        <button className=" hidden md:flex px-6 py-3 text-xs bg-white text-[#401408] font-semibold rounded-none ">
+          Contact Us
+        </button>
         <div className="md:hidden ">
           <button onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? (
