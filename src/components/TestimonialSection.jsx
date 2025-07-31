@@ -18,7 +18,7 @@ function TestimonialSection() {
     },
   ];
   return (
-    <section className="flex flex-col lg:flex-row gap-6 lg:mx-28 lg:my-40">
+    <section className="flex flex-col lg:flex-row m-8 gap-6 lg:mx-28 lg:my-40">
       {/* LHS */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:w-1/2">
         {reports.map((report, index) => (
